@@ -10,12 +10,9 @@ class Game
   end
 
   def run
-    #print welcome message
     @board.render
     puts "Make your move: "
     move = gets.chomp.split(",").map(&:to_i)
-
-    #if choose a position, REVEAL (recursion). if bomb, lose
     puts "Congratulations, you win!"
   end
 
