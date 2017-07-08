@@ -1,6 +1,6 @@
 # Minesweeper
-###Phase 1
+### Phase 1
 CLI game built with Ruby
-###Current Phase
+### Current Phase
 Interactive game built with Javascript and React
-[**Live Demo!**](https://github.com/anastassia-b/minesweeper/index.html)
+[**Live Demo!**](anastassia-b.github.io/minesweeper)
