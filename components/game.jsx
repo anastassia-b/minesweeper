@@ -27,12 +27,12 @@ class Game extends React.Component{
   }
 
   render() {
-    let mode;
+    let end;
     if (this.state.board.lost() || this.state.board.won()) {
       const text = this.state.board.won() ? "Congrats, you won!" : "Play again?";
-      mode =
+      end =
         <div>
-          <div>
+          <div className="end-content">
             <p>{text}</p>
             <button onClick={this.restartGame}>Play Again</button>
           </div>
@@ -41,7 +41,7 @@ class Game extends React.Component{
 
     return (
       <div>
-        {mode}
+        {end}
         <Board board={this.state.board} updateGame={this.updateGame} />
       </div>
     );

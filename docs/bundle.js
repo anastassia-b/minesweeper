@@ -22473,15 +22473,15 @@ var Game = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var mode = void 0;
+      var end = void 0;
       if (this.state.board.lost() || this.state.board.won()) {
         var text = this.state.board.won() ? "Congrats, you won!" : "Play again?";
-        mode = _react2.default.createElement(
+        end = _react2.default.createElement(
           'div',
           null,
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'end-content' },
             _react2.default.createElement(
               'p',
               null,
@@ -22499,7 +22499,7 @@ var Game = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        mode,
+        end,
         _react2.default.createElement(_board2.default, { board: this.state.board, updateGame: this.updateGame })
       );
     }
