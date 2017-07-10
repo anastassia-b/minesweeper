@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname,
   entry: "./react_minesweeper.jsx",
   output: {
-    path: path.resolve(__dirname),
+    path: path.join(path.resolve(__dirname), "docs"),
     filename: "bundle.js"
   },
   module: {
