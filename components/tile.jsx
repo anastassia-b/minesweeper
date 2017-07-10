@@ -7,7 +7,8 @@ class Tile extends React.Component{
   }
 
   click(e) {
-
+    const flagged = e.altKey ? true : false;
+    this.props.updateGame(this.props.tile, flagged);
   }
 
   render() {
@@ -16,7 +17,7 @@ class Tile extends React.Component{
     if (tile.explored) {
       if (tile.bombed) {
         classname = 'bombed';
-        text = 'X';
+        text = '\ud83d\udca3';
       } else {
         classname = 'explored';
         count = tile.adjacentBombCount();
@@ -24,7 +25,7 @@ class Tile extends React.Component{
       }
     } else if (tile.flagged) {
       classname = 'flagged';
-      text = 'O';
+      text = '\u2691';
     } else {
       classname = 'unexplored';
     }
