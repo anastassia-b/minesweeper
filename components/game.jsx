@@ -31,7 +31,7 @@ class Game extends React.Component{
     if (this.state.board.lost() || this.state.board.won()) {
       const text = this.state.board.won() ? "Congrats, you won!" : "Play again?";
       end =
-        <div>
+        <div className="end-screen">
           <div className="end-content">
             <p>{text}</p>
             <button onClick={this.restartGame}>Play Again</button>

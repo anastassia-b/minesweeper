@@ -22478,7 +22478,7 @@ var Game = function (_React$Component) {
         var text = this.state.board.won() ? "Congrats, you won!" : "Play again?";
         end = _react2.default.createElement(
           'div',
-          null,
+          { className: 'end-screen' },
           _react2.default.createElement(
             'div',
             { className: 'end-content' },
